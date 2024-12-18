@@ -1,0 +1,13 @@
+        base_prompt = """
+            Please take the attached unit tests and goal, and provide code written in python that will pass the tests. 
+            You are being used as part of a fully automated system. The answer you provide will be directly written to a .py file to be executed. 
+            Absolutely do not return the python executable or quotes around the code. Just return the raw code. 
+            Please don't include any filler text, just the code. Don't include the tests themselves in your response.  
+            If the original code provided failed, this prompt might include an error along with the unit test. Please keep that error in mind.  
+            Tests to pass:
+            {tests}
+            Goal: {goal}
+            Previous Code: {last_generated_code}
+            Error: {error}
+            Answer: 
+        """
